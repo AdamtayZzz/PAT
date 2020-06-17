@@ -211,3 +211,21 @@
 ### 1088 三人行
 思路：从99-10依次递减，求满足条件的最大甲值。
 坑点：丙的值可能是浮点数
+
+
+## Advanced Level
+### 1001 A+B Format
+思路：利用对于1000求余，每次将余数存于栈中。最终出栈等到正序结果，加上符号即可。  
+特殊情况：0
+### 1002 A+B for Polynomials
+思路：用长度为1001的vector，存每个指数级的系数值。最后输出统计结果。
+
+###  1005 Spell It Right 
+思路：利用(char-'0')求和得到数值,最后利用对10求余输出最终结果。  
+特殊情况：0
+### 1006 Sign In and Sign Out 
+思路：建立结构体存储id，时间。直接用时间的字符串的比较进行sort排序，最终得到结果。
+### 1007 Maximum Subsequence Sum 
+### 最大子序列 <-> 经典动态规划问题
+思路：动态规划问题，cursum = max{cursum+num,num}  
+测试点四：没看到output的要求-> If all the K numbers are negative, then its maximum sum is defined to be 0, and you are supposed to output the first and the last numbers of the whole sequence.
