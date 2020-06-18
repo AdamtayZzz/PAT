@@ -229,3 +229,9 @@
 ### 最大子序列 <-> 经典动态规划问题
 思路：动态规划问题，cursum = max{cursum+num,num}  
 测试点四：没看到output的要求-> If all the K numbers are negative, then its maximum sum is defined to be 0, and you are supposed to output the first and the last numbers of the whole sequence.
+### 1008 Elevator
+思路：计算每两个层之间的差值，正负区分时间大小。
+### 1009 Product of Polynomials 
+思路：用一个结构体保存多项式一项的指数值和数据值，存入vector数组中。最后利用两层循环计算乘法，输出最终结果。
+### 1011 World Cup Betting
+思路：挑出每场比赛赔率最高的，并且记录W/T/L，并计算成绩，最终输出结果。
