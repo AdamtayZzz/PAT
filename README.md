@@ -219,14 +219,16 @@
 特殊情况：0
 ### 1002 A+B for Polynomials
 思路：用长度为1001的vector，存每个指数级的系数值。最后输出统计结果。
-
+### 1003 Emergency
+#### 经典Dijkstra算法
+思路：在距离的比较外，增加对相同最短路径长度的统计以及最大化支援车辆数目的统计，主要是普通的Dijakstra算法在遍历每个可连接节点下做最短路径更新位置下增加一些信息追踪功能。
 ###  1005 Spell It Right 
 思路：利用(char-'0')求和得到数值,最后利用对10求余输出最终结果。  
 特殊情况：0
 ### 1006 Sign In and Sign Out 
 思路：建立结构体存储id，时间。直接用时间的字符串的比较进行sort排序，最终得到结果。
 ### 1007 Maximum Subsequence Sum 
-### 最大子序列 <-> 经典动态规划问题
+#### 最大子序列 <-> 经典动态规划问题
 思路：动态规划问题，cursum = max{cursum+num,num}  
 测试点四：没看到output的要求-> If all the K numbers are negative, then its maximum sum is defined to be 0, and you are supposed to output the first and the last numbers of the whole sequence.
 ### 1008 Elevator
@@ -235,3 +237,9 @@
 思路：用一个结构体保存多项式一项的指数值和数据值，存入vector数组中。最后利用两层循环计算乘法，输出最终结果。
 ### 1011 World Cup Betting
 思路：挑出每场比赛赔率最高的，并且记录W/T/L，并计算成绩，最终输出结果。
+### 1012 The Best Rank
+思路：用map存储id和名次、科目的对应关系，根据优先级A->C->M->E来分别对成绩排序，并同时对两个map进行更新，只有名次更低的情况才会替换，否则保持原样，最后输出结果。
+### 1013 Battle Over Cities
+#### 经典的并查集，检查子连通图个数
+思路：首先用数组存储连通的顶点信息。除去删除的城市外，构造并查集，检查最终得到并查子集的个数。  
+超时原因：首先最后一个测试点超时的原因：没有设计全局vector<int> tree来存储变量；设计使用int city[n][n] 而不是 city[m][2]，这样n*n>>m，会超时。
