@@ -1,6 +1,10 @@
     #include<iostream>
     #include<vector>
     using namespace std;
+    typedef struct{
+        int next;
+        int dis;
+    }edge;
     int main()
     {
         int n,m,c1,c2;
