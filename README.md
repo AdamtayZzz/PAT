@@ -214,10 +214,10 @@
 
 
 ## Advanced Level
-### 1001 A+B Format
+### 1001 A+B Format 求余 栈的使用
 思路：利用对于1000求余，每次将余数存于栈中。最终出栈等到正序结果，加上符号即可。  
 特殊情况：0
-### 1002 A+B for Polynomials
+### 1002 A+B for Polynomials 哈希映射
 思路：用长度为1001的vector，存每个指数级的系数值。最后输出统计结果。
 ### 1003 Emergency
 #### 经典Dijkstra算法
@@ -226,22 +226,22 @@
 #### 树的存储形式 队列实现宽度优先遍历
 思路：将树存储在数组中，数组元素指当前索引所指节点的父节点索引。  
 利用队列实现每次访问同一层的树节点，统计没有子节点的个数，宽度优先遍历。
-###  1005 Spell It Right 
+###  1005 Spell It Right 字符和数转换
 思路：利用(char-'0')求和得到数值,最后利用对10求余输出最终结果。  
 特殊情况：0
-### 1006 Sign In and Sign Out 
+### 1006 Sign In and Sign Out 排序
 思路：建立结构体存储id，时间。直接用时间的字符串的比较进行sort排序，最终得到结果。
 ### 1007 Maximum Subsequence Sum 
 #### 最大子序列 <-> 经典动态规划问题
 思路：动态规划问题，cursum = max{cursum+num,num}  
 测试点四：没看到output的要求-> If all the K numbers are negative, then its maximum sum is defined to be 0, and you are supposed to output the first and the last numbers of the whole sequence.
-### 1008 Elevator
+### 1008 Elevator 
 思路：计算每两个层之间的差值，正负区分时间大小。
-### 1009 Product of Polynomials 
+### 1009 Product of Polynomials 哈希映射
 思路：用一个结构体保存多项式一项的指数值和数据值，存入vector数组中。最后利用两层循环计算乘法，输出最终结果。
-### 1011 World Cup Betting
+### 1011 World Cup Betting 
 思路：挑出每场比赛赔率最高的，并且记录W/T/L，并计算成绩，最终输出结果。
-### 1012 The Best Rank
+### 1012 The Best Rank 
 思路：用map存储id和名次、科目的对应关系，根据优先级A->C->M->E来分别对成绩排序，并同时对两个map进行更新，只有名次更低的情况才会替换，否则保持原样，最后输出结果。
 ### 1013 Battle Over Cities
 #### 经典的并查集，检查子连通图个数
@@ -251,7 +251,7 @@
 #### 经典的优先队列问题(注意结构体优先队列，重载运算符的方法)
 思路：优先队列控制的条件有两个，第一个结束时间越早越好，窗口数越小越好。  
 坑点：是开始时间不晚于17：00即可进行完！
-### 1015 Reversible Primes
+### 1015 Reversible Primes 素数判断
 思路：每次先检查输入数字是否为素数，再检查其reverse后是否为素数，输出相应结果。
 ### 1016 Phone Bills 
 #### 复杂的哈希映射题（REMAIN）
@@ -260,21 +260,30 @@
 ### 1017 Queueing at Bank
 #### 经典的优先队列问题
 思路：优先队列中通过结束时间排序，来判断选择哪个窗口。统计等待时间分为两种情况，第一种为窗口空闲晚于到达时间，有增值；第二种为窗口空闲时间遭遇到达时间，增值为0。
-### 1019 General Palindromic Number 
+### 1019 General Palindromic Number 进制转换
 思路：由于基数的可以很大，所以每一位不一定为单个数字，用vector存储，然后reverse后进行比较，检查其是否为回文数。
 ### 1020 Tree Traversals
 #### 二叉树应用 利用后序和中序来构造唯一二叉树 + 树的广度优先遍历
 思路：用queue实现广度优先遍历，存叶子节点的结构体指针。
-
-### 1022 Digital Library
+### 1022 Digital Library map和set存储信息
 #### 输入格式的控制（正确输入的例子）
 思路：利用map存储各类信息和id组成的set的对应关系。  
 坑点：%07d格式输出整形id，%04d格式输出整形year。
-### 1023 Have Fun with Numbers
+### 1023 Have Fun with Numbers 大数加法运算
 思路：在字符串上，利用carry和加法完成运算。用map统计前后字符串中出现次数相同与否。
-### 1024 Palindromic Number
+### 1024 Palindromic Number 大数加法运算
 思路：数字很大，所以只能用字符串来模拟大数据的加法运算。
-### 1025 PAT Ranking 
+### 1025 PAT Ranking 排序
 思路：用vector做记录，根据id和成绩来分段排序，最后汇总。每次排序时都要给他附上名次即可。
-### 1027 Colors in Mars 
+### 1027 Colors in Mars 进制转换
 思路: 十进制转十三进制，注意0的处理。
+### 1028 List Sorting 排序
+思路：简单的sort结构体排序，但注意要用printf、scanf否则会超时。
+### 1029 Median 双指针
+思路：考虑一个数组遍历完但仍未找到中位数的情况。
+### 1030 Travel Plan 
+#### 经典Dijkstra算法 + 数组做路径统计
+### 1031 Hello World for U 
+思路：找规律最后填充即可
+### 1032 Sharing 哈希映射
+思路：用数组代表地址空间，存储完之后，遍历第一个单词，做标记。最后遍历第二个单词，检查到第一个标记就输出结果。
