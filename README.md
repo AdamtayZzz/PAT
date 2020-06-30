@@ -333,5 +333,19 @@
 其他思路：[柳诺大神](https://www.liuchuo.net/archives/2283)提到先删除不喜欢的颜色，在用数组索引号做最长递增子序列的长度。
 ### 1046 Shortest Distance 哈希映射
 思路：直接用一个数组存储1-k的路径和，最后用路径和相减。减少了重复运算次数，大大加快效率
+### 1047 Student List for Course 哈希映射+排序
+思路：和1039类似思路，将string转为int，建立课程和学生数组的映射，最后排序输出即可。
 ### 1048 Find Coins 排序+双指针
 思路：双指针遍历，若更大则减少较大端索引；若更小则增加较小端索引。
+### 1050 String Subtraction Set使用
+思路：用set存储第二个字符串出现的字符；set唯一存放每个字符；遍历第一个字符串若在set中则不输出。
+### 1051 Pop Sequence 模拟堆栈（REMAIN）
+思路：模拟堆栈，如果要pop的数字比堆栈top的要大，要一直进栈到数字相等。其后一直出栈，直到再次出现不等数字。
+### 1052 Linked List Sorting 哈希映射排序
+思路：无需按照真正链表排序方法写；直接创建一个结构体，将链表上的结点存入vector中，然后用value值从小到大排序，start为自身address，而next为下一个节点的address。  
+特殊情况：考虑某些结点不在链表中，链表为空等情况。
+### 1053 Path of Equal Weight DFS
+思路：用数组存每个节点的父节点信息，进行dfs遍历所有满足条件的情况。当权值满足且为叶子节点时才存入到result中。最后用sort来对序列进行非递增排序。这里的dfs要实时对其对weight和path进行回退。
+### 1054 The Dominant Color map的使用 哈希映射
+思路：用map统计每个色度出现次数，超过half则输出。  
+注意：cout cin会超时，转而使用scanf 和 printf！
